@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini project3</title>
+</head>
+<body>
+    <h2>Project 3</h2>
+    
+    <h4 id="age"></h4>
+
+    <script>
+        //ask user for prompt
+        var data = prompt('Enter a Number')
+        //converts input to integer/number
+        data = Number(data)
+
+        //checks if use entered a prompt
+        if(data){
+            if (data >= 18) {
+                var age = document.getElementById('age')
+                age.innerHTML = "You are above 18 years of age or older"
+            } else if(data < 18) {
+                //check if age is less than 18 years
+                var age = document.getElementById('age')
+                age.innerHTML = "You are not an adult"
+            }
+        } else {
+            //if no input is made by the user
+            var age = document.getElementById('age')
+            age.innerHTML = "Enter a digit in the prompt"
+        }
+    </script>
+</body>
+</html>
