@@ -1,6 +1,6 @@
 # Project 3 - Age Checker
 
-This repository contains code for **Project 3**, a simple HTML webpage that checks if the entered number represents an adult's age (18 years or older) or not. Based on the user input, the webpage displays a corresponding message leveraging the knowledge of loops and conditions.
+This repository contains code for **Project 3**, a simple HTML webpage that checks if the entered number represents an adult's age (18 years or older) or not. Based on the user input, the webpage displays a corresponding message leveraging the knowledge of conditions.
 
 ## Table of Contents
 - [Introduction](#introduction)
