@@ -24,7 +24,7 @@ In this project, we have created a user-friendly webpage that enables users to e
 Follow the steps below to try out the URL formatting feature:
 
 1. **Clone** this repository to your local machine using `git clone`
-2. Open the `index.html` file in your web browser.
+2. Open the `project2.html` file in your web browser.
 
 ## Usage
 
