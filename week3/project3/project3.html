@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project3</title>
+</head>
+
+<body>
+
+    <script>
+
+        // The magic number to guess
+        let MagicNumber = 23;
+
+        // Selecting the body element of the HTML document
+        var body = document.querySelector("body");
+
+        // Start of the number guessing loop
+        while (true) {
+            // Prompt the user to enter a number
+            let num = Number(prompt("What is the number?"));
+
+            // Check if the user entered a valid number and if it matches the MagicNumber
+            if (num && num === MagicNumber) {
+                // If the number is correct, update the appearance of the page
+                body.style.backgroundColor = "gold";
+                body.style.color = "blue";
+                body.innerHTML = "<h1>Congratulations! YOU WIN</h1>";
+
+                // Exit the loop as the user has guessed the correct number
+                break;
+            }
+        }
+        // End of the number guessing loop
+    </script>
+
+</body>
+
+</html>
