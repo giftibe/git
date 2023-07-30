@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mini project1 - Tip calculator</title>
+</head>
+
+<body>
+    <h1>Tip calculator</h1>
+    <ul>
+        <li>The total bill = <span id="totalbill"></span></li>
+        <li>Tip amount = <span id="tip"></span> </li>
+    </ul>
+
+    <script>
+
+        function tip(totalAmount, tip = 5, returnOnlyTheTip = false) {
+            //converting the tip to percentage
+            tip = tip / 100;
+            //calaculting the tip when an amount is given
+            let tipAmount = totalAmount * tip;
+
+            totalAmount = totalAmount + tipAmount;
+            if (returnOnlyTheTip) {
+                //return only th amount to tip
+                return tipAmount;
+            }
+            return totalAmount;
+        }
+
+        let totalPay = tip(2400, 10);
+        let totalbill = document.getElementById('totalbill');
+        totalbill.innerHTML = totalPay;
+
+        let totalTip = tip(2400, 10, true);
+        let tipToPay = document.getElementById('tip');
+        tipToPay.innerHTML = totalTip;
+    </script>
+</body>
+
+</html>
