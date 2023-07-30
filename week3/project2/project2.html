@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini project 2</title>
+</head>
+
+<body>
+    <!-- This is the main heading of the page -->
+    <h2>Event Listeners</h2>
+
+    <!-- Sample text list items -->
+    <h3>Sample text</h3>
+    <li>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, hic quibusdam? Amet nemo, soluta laboriosaml
+    </li>
+    <li>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sunt veniam maiores facere vitae
+        exercitationem assumenda reprehenderit voluptatum amet commodi?
+    </li>
+    <li>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio ut optio, error culpa consequuntur
+        similique, consectetur enim ratione libero accusantium, magni doloremque. Ipsam, eos! Ea totam nostrum
+    </li>
+
+    <!-- Input fields for background color, text color, and font size -->
+    <div>
+        <label for="bgColor">Background color</label>
+        <input type="text" class="form-control js-bg-color" id="bgColor">
+    </div>
+
+    <div>
+        <label for="textColor">Text color</label>
+        <input type="text" class="form-control js-text-color" id="textColor">
+    </div>
+
+    <div>
+        <label for="bgColor">Background color</label>
+        <input type="number" class="form-control js-font-size" id="fontSize">
+    </div>
+
+    <script>
+
+        // Selecting the input elements with the defined class names
+        var bgColor = document.querySelector(".js-bg-color");
+        var textColor = document.querySelector(".js-text-color");
+        var fontSize = document.querySelector(".js-font-size");
+        var body = document.querySelector("body");
+
+        // Adding event listeners to the input fields
+
+        // Event listener for background color input
+        bgColor.addEventListener('keyup', (e) => {
+            // Changing the background color of the body based on the user input
+            body.style.backgroundColor = e.target.value;
+        });
+
+        // Event listener for text color input
+        textColor.addEventListener('keyup', (e) => {
+            // Changing the text color of the body based on the user input
+            body.style.color = e.target.value;
+        });
+
+        // Event listener for font size input
+        fontSize.addEventListener('keyup', (e) => {
+            // Changing the font size of the body based on the user input
+            body.style.fontSize = e.target.value + "px";
+        });
+
+    </script>
+
+</body>
+
+</html>
