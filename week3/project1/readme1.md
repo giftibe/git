@@ -1,6 +1,6 @@
 # Mini Project 4 - Tip Calculator
 
-This repository contains code for **Mini Project 4**, a simple HTML webpage that calculates tips for a given total bill amount and tip percentage. The script allows users to input the total bill amount and the desired tip percentage, and it provides both the total bill amount (including the tip) and the tip amount.
+This repository contains code for **Mini Project 1**, a simple HTML webpage that calculates tips for a given total bill amount and tip percentage. The script allows users to input the total bill amount and the desired tip percentage, and it provides both the total bill amount (including the tip) and the tip amount.
 
 ## Table of Contents
 - [Introduction](#introduction)
