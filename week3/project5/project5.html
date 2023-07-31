@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Animation Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles5.css">
+</head>
+
+<body>
+    <h1 id="title">Animation Project </h1>
+
+    <script>
+        // Get the title element by its id
+        const titleElement = document.getElementById("title");
+
+        // Split the title into individual letters
+        const letters = titleElement.innerText.split("");
+        let html = "";
+
+        // Loop through each letter and create a span element for each
+        letters.forEach((letter) => {
+            let classes = "";
+            if (letter !== " ") {
+                classes = "letter js-letter";
+            }
+            html = html + `<span class='${classes}'>${letter}</span>`;
+        });
+
+        // Replace the title with the modified HTML content containing the individual letter spans
+        titleElement.innerHTML = html;
+
+        // Get all the letter elements (spans) with the class "js-letter"
+        const letterElements = document.querySelectorAll(".js-letter");
+
+        // Add event listeners to each letter to apply the "active" class on mouseover and remove it on mouseout
+        letterElements.forEach((letterElement) => {
+            letterElement.addEventListener("mouseover", function (event) {
+                this.classList.add("active");
+            });
+            letterElement.addEventListener("mouseout", function (event) {
+                this.classList.remove("active");
+            });
+        });
+    </script>
+</body>
+
+</html>
