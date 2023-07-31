@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Modal creation</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1>My Modal</h1>
+    <!-- Modal content -->
+    <div class="modal js-modal">
+        <h1 class="js-modal-title">This is my modal</h1>
+        <p class="js-modal-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+            similique totam inventore ab nulla autem quasi cumque cum provident
+            voluptatem nam itaque. Vel numquam ut deleniti ducimus debitis nisi minus
+            iusto?
+        </p>
+        <p>
+            <button class="js-modal-close">Close Modal</button>
+        </p>
+    </div>
+
+    <!-- Button to open the modal -->
+    <button class="js-modal-open">OPEN MODAL</button>
+
+    <script>
+        class myModalClass {
+            constructor() {
+                this.modalElement = document.querySelector(".js-modal");
+            }
+
+            // Function to open the modal
+            openModal() {
+                this.modalElement.style.display = "initial";
+            }
+
+            // Function to close the modal
+            closeModal() {
+                this.modalElement.style.display = "none";
+            }
+
+            // Function to change the content of the modal
+            changeContent(title, text) {
+                if (title !== undefined) {
+                    this.modalElement.querySelector(".js-modal-title").innerText = title;
+                }
+                if (text !== undefined) {
+                    this.modalElement.querySelector(".js-modal-text").innerText = text;
+                }
+            }
+        }
+
+        // Getting references to the buttons and creating a new modal object
+        const openModalBtn = document.querySelector(".js-modal-open");
+        const closeModalBtn = document.querySelector(".js-modal-close");
+        const modal = new myModalClass();
+
+        // Event listener for the open modal button
+        openModalBtn.addEventListener("click", function (event) {
+            modal.openModal();
+        });
+
+        // Event listener for the close modal button
+        closeModalBtn.addEventListener("click", function (event) {
+            modal.closeModal();
+        });
+    </script>
+</body>
+
+</html>
